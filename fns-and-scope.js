@@ -7,6 +7,18 @@ var name = 'Tyler';
 
   //Code Here
 
+  function isTyler(name) {
+     if( name.toLowerCase() === 'tyler' ) {
+        return true;
+     }
+     else {
+     return false;
+}
+  }
+
+  console.log(isTyler('anton'));
+  console.log(isTyler('tyler'));
+
 //Next problem
 
 
@@ -15,6 +27,13 @@ var name = 'Tyler';
 
 
   //Code Here
+
+      function getName() {
+         var name = prompt("What is your name?");
+         return name;
+      }
+
+      console.log(getName());
 
 
 //Next Problem
@@ -25,7 +44,13 @@ var name = 'Tyler';
 //then alerts "Welcome, " plus whatever the users name is.
 
   //Code Here
+      var name2 = getName();
 
+      function welcome(func) {
+         alert("welcome " + func);
+      }
+
+      console.log(welcome(name2));
 
 //Next problem
 
@@ -55,15 +80,25 @@ var name = 'Tyler';
 //Create a function called myName that returns your name
 
   //Code Here
-  
+
+function myName() {
+   return "anton Bredl";
+}
+
+console.log(myName());
 
 
 //Now save the function definition of myName into a new variable called newMyName
 
   //Code Here
 
+var newMyName = myName;
+
+
 //Now alert the result of invoking newMyName
 
+console.log(newMyName());
+console.log(newMyName);
 
 
 //Next problem
@@ -74,8 +109,19 @@ var name = 'Tyler';
 
   //Code Here
 
+  function outerFn() {
+     return function() {
+        return "anton the 5th";
+     }
+ }
+
 //Now save the result of invoking outerFn into a variable called innerFn.
 
   //Code Here
 
+  var innerFn = outerFn();
+
+
 //Now invoke innerFn.
+
+console.log(innerFn());
